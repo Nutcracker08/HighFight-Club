@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090909;
+    color: #fff;
+    min-height: 100vh
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: rgba(0, 0, 0, .92);
+    border-bottom: 1px solid #292929;
+    z-index: 1000
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 1px
+}
+
+.logo span {
+    color: #e10600
+}
+
+nav {
+    display: flex;
+    gap: 32px
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .25s
+}
+
+nav a:hover,
+nav a.active {
+    color: #e10600
+}
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .9)), url("https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=2000&q=85") center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+.hero-inner {
+    padding: 90px 20px 30px
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 108px);
+    font-weight: 900;
+    letter-spacing: 7px
+}
+
+.hero p {
+    font-size: 21px;
+    color: #ddd;
+    margin: 18px 0 32px
+}
+
+.button,
+.weight-button {
+    display: inline-block;
+    padding: 16px 30px;
+    background: #e10600;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #e10600;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: .25s
+}
+
+.button:hover,
+.weight-button:hover {
+    background: transparent
+}
+
+.intro {
+    padding: 85px 10%;
+    text-align: center;
+    background: #111
+}
+
+.intro h2 {
+    font-size: 38px;
+    margin-bottom: 18px
+}
+
+.intro p {
+    max-width: 850px;
+    margin: auto;
+    color: #aaa;
+    line-height: 1.7;
+    font-size: 17px
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 7%
+}
+
+.card {
+    min-height: 420px;
+    display: flex;
+    align-items: flex-end;
+    padding: 32px;
+    color: #fff;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: .3s
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 15%, rgba(0, 0, 0, .95))
+}
+
+.card>div {
+    position: relative;
+    z-index: 1
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    filter: brightness(1.15)
+}
+
+.card h2 {
+    font-size: 37px;
+    margin-bottom: 12px
+}
+
+.card p {
+    color: #ddd;
+    line-height: 1.6
+}
+
+.card-prices {
+    background-image: url("https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1200&q=80")
+}
+
+.card-betting {
+    background-image: url("https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80")
+}
+
+.card-contact {
+    background-image: url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1200&q=80")
+}
+
+.page {
+    padding: 130px 7% 70px;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1c1c1c, #080808 60%)
+}
+
+.page h1 {
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 15px
+}
+
+.page-sub {
+    text-align: center;
+    color: #aaa;
+    max-width: 800px;
+    margin: 0 auto 45px;
+    line-height: 1.7
+}
+
+.weights {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px
+}
+
+.weight-card {
+    background: #151515;
+    border: 1px solid #292929;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.weight-card h2 {
+    font-size: 23px
+}
+
+.weight-card p {
+    color: #888;
+    margin-top: 7px
+}
+
+.content-box {
+    max-width: 850px;
+    margin: 30px auto;
+    background: #141414;
+    border: 1px solid #292929;
+    padding: 40px
+}
+
+.content-box h2 {
+    font-size: 30px;
+    margin-bottom: 18px
+}
+
+.content-box p {
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 18px
+}
+
+.notice {
+    border-left: 4px solid #e10600;
+    padding: 15px 18px;
+    background: #1b1b1b;
+    color: #ccc;
+    margin: 25px 0
+}
+
+.paywall {
+    max-width: 650px;
+    margin: 40px auto;
+    text-align: center;
+    background: #141414;
+    border: 1px solid #333;
+    padding: 45px
+}
+
+.paywall .lock {
+    font-size: 55px;
+    margin-bottom: 15px
+}
+
+.price {
+    font-size: 42px;
+    font-weight: 900;
+    margin: 20px 0
+}
+
+
+.fake-form {
+    display: grid;
+    gap: 13px;
+    margin-top: 25px
+}
+
+.fake-form input {
+    padding: 14px;
+    background: #0c0c0c;
+    border: 1px solid #333;
+    color: #fff
+}
+
+.fake-form .button {
+    cursor: pointer
+}
+
+.contact-grid {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+}
+
+.contact-item {
+    background: #151515;
+    border: 1px solid #292929;
+    padding: 30px
+}
+
+.contact-item h2 {
+    text-align: center;
+    margin-bottom: 12px
+}
+
+.contact-item p {
+    color: #aaa;
+    line-height: 1.8
+}
+
+.contact-item a {
+    color: #e10600
+}
+
+.back {
+    text-align: center;
+    margin-top: 35px
+}
+
+footer {
+    padding: 28px;
+    text-align: center;
+    color: #666;
+    border-top: 1px solid #222
+}
+
+@media(max-width:800px) {
+    header {
+        padding: 0 18px
+    }
+
+    .logo {
+        font-size: 20px
+    }
+
+    nav {
+        gap: 13px
+    }
+
+    nav a {
+        font-size: 11px
+    }
+
+    .cards,
+    .weights,
+    .contact-grid {
+        grid-template-columns: 1fr
+    }
+
+    .page h1 {
+        font-size: 40px
+    }
+
+    .weight-card {
+        gap: 15px;
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .hero h1 {
+        letter-spacing: 3px
+    }
+}

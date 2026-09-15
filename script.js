@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded", () => { document.querySelectorAll(".fake-form").forEach(form => form.addEventListener("submit", e => { e.preventDefault(); const msg = form.querySelector(".form-message"); if (msg) { msg.textContent = "Es wurden keine Zahlungsdaten übertragen."; msg.style.color = "#e10600" } })) });
